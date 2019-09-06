@@ -29,12 +29,13 @@
     <div class="row justify-content-center">
 
     </div>
-    @if($item->exists)
+    
         <div class="row justify-content-center" style="margin-top: 15px;">
             <div class="col-md-12">
                 <div class="row justify-content-center">
                     <div class="card col-md-8">
                         <div class="card-body ">
+                        @if($item->exists)
                             <form method="POST" action="{{ route('heroes.update', $item->id) }}"
                                   enctype="multipart/form-data">
                                 @method('PATCH')
